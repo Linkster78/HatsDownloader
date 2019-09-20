@@ -55,7 +55,7 @@ public class Downloader {
 		
 		NodeList fileList = document.getElementsByTagName("File");
 		
-		ExecutorService threadPool = Executors.newFixedThreadPool(3);
+		ExecutorService threadPool = Executors.newFixedThreadPool(2);
 		List<CompletableFuture<Void>> futures = new ArrayList<CompletableFuture<Void>>(fileList.getLength() / 2);
 		
 		for(int i = 0; i < fileList.getLength(); i++) {
